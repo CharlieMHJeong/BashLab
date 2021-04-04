@@ -1,9 +1,10 @@
 #### Requirements
 
-● Enforces that it be executed with superuser (root) privileges. If the script is not executed with superuser privileges it will not attempt to create a user and returns an exit status of 1. 
+1. Enforces that it be executed with superuser (root) privileges. \n
+   If the script is not executed with superuser privileges it will not attempt to create a user and returns an exit status of 1. 
 All messages associated with this event will be displayed on standard error.
 
-● Provides a usage statement much like you would find in a man page if the user does not
+2. Provides a usage statement much like you would find in a man page if the user does not
 supply an account name on the command line and returns an exit status of 1. All messages
 associated with this event will be displayed on standard error.
 * Disables (expires/locks) accounts by default.
