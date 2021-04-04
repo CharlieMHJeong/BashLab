@@ -4,17 +4,14 @@
 * If the script is not executed with superuser privileges it will not attempt to create a user and returns an exit status of 1. 
 * All messages associated with this event will be displayed on standard error.
 
-2. Provides a usage statement much like you would find in a man page if the user does not
-supply an account name on the command line and returns an exit status of 1. All messages
-associated with this event will be displayed on standard error.
-* Disables (expires/locks) accounts by default.
-* Allows the user to specify the following options:
-
-○ -d Deletes accounts instead of disabling them.
-
-○ -r Removes the home directory associated with the account(s).
-
-○ -a Creates an archive of the home directory associated with the accounts(s) and storesthe archive in the /archives directory. (NOTE: /archives is not a directory that exists by
+### 2. Usage Statement
+* Provides a usage statement much like you would find in a man page if the user does not supply an account name on the command line and returns an exit status of 1. 
+* All messages associated with this event will be displayed on standard error.
+  * Disables (expires/locks) accounts by default.
+  * Allows the user to specify the following options:
+  * -d Deletes accounts instead of disabling them.
+  * -r Removes the home directory associated with the account(s).
+  * -a Creates an archive of the home directory associated with the accounts(s) and storesthe archive in the /archives directory. (NOTE: /archives is not a directory that exists by
 default on a Linux system. The script will need to create this directory if it does not exist.)
 ○ Any other option will cause the script to display a usage statement and exit with an exit status of 1.
 
