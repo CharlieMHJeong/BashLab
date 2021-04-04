@@ -1,3 +1,5 @@
+### Requirements
+
 ● Enforces that it be executed with superuser (root) privileges. If the script is not executed with superuser privileges it will not attempt to create a user and returns an exit status of 1.
 All messages associated with this event will be displayed on standard error.
 
