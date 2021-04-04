@@ -6,8 +6,8 @@ All messages associated with this event will be displayed on standard error.
 ● Provides a usage statement much like you would find in a man page if the user does not
 supply an account name on the command line and returns an exit status of 1. All messages
 associated with this event will be displayed on standard error.
- - Disables (expires/locks) accounts by default.
-● Allows the user to specify the following options:
+* Disables (expires/locks) accounts by default.
+* Allows the user to specify the following options:
 
 ○ -d Deletes accounts instead of disabling them.
 
