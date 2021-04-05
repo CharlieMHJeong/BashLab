@@ -20,9 +20,7 @@
 * Accepts a list of usernames as arguments. 
 * At least one username is required or the script will display a usage statement much like you would find in a man page and return an exit status of 1.
 * All messages associated with this event will be displayed on standard error.
-
-##### set 
-ARCHIVE_DIR='/archive'
+ - ARCHIVE_DIR='/archive'
 ### 4. Loop through all the username supplied as args
 
 * Refuses to disable or delete any accounts that have a UID less than 1,000. 
@@ -30,8 +28,8 @@ ARCHIVE_DIR='/archive'
 * Create an archive if requested to do so.
 * Make sure the ARCHIVE_DIR directory exists.
 * Archive the user's home directory and move it into the ARCHIVE_DIR
-##### HOME_DIR="/home/${USERNAME}"
-##### ARCHIVE_FILE="${ARCHIVE_DIR}/${USERNAME}.tgz"
+  - HOME_DIR="/home/${USERNAME}"
+  - ARCHIVE_FILE="${ARCHIVE_DIR}/${USERNAME}.tgz"
   
 
 ### 5. Informs the user if the account was not able to be disabled, deleted, or archived for some reason.
