@@ -5,8 +5,8 @@
 3. Copy the publice key to all the remote servers. 
 `ssh-copy-id serverNN`
 4. Test
-vagrant@server01:~/.ssh$ssh-keygen </br>
-vagrant@server01:~/.ssh$ssh-copy-id server02</br>
+$ssh-keygen </br>
+$ssh-copy-id server02</br>
 Are you sure you want to continue connecting (yes/no)? yes </br>
 vagrant@server02's password: **ENTER PASSWORD** </br>
 Number of key(s) added: 1</br>
