@@ -1,16 +1,16 @@
 #Configure SSH Authentication
-1. Create an SSH Key pair on the main server and accept all the default.
+1. Create an SSH Key pair on the main server and accept all the default.</br>
 `ssh-keygen` 
 2. add serverNN in `/etc/hosts` 
-3. Copy the publice key to all the remote servers. 
+3. Copy the publice key to all the remote servers. </br>
 `ssh-copy-id serverNN`
 4. Test</br>
-$ssh-keygen </br>
-$ssh-copy-id server02</br>
-Are you sure you want to continue connecting (yes/no)? yes </br>
-vagrant@server02's password: **ENTER PASSWORD** </br>
+`ssh-keygen` </br>
+`ssh-copy-id server02`</br>
+Are you sure you want to continue connecting (yes/no)? `yes` </br>
+vagrant@server02's password: `ENTER PASSWORD` </br>
 Number of key(s) added: 1</br>
-vagrant@server01:~/.ssh$ssh server02 hostname</br>
+vagrant@server01:~/.ssh$`ssh server02 hostname`</br>
 server02</br>
 
 # Requirements
