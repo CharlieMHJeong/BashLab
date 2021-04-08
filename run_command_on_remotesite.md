@@ -1,4 +1,4 @@
-#Configure SSH Authentication
+## Configure SSH Authentication
 1. Create an SSH Key pair on the main server and accept all the default.</br>
 `ssh-keygen` 
 2. add serverNN in `/etc/hosts` 
