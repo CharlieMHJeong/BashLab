@@ -1,4 +1,7 @@
 # Requirements
+
+
+
 ### 1. Provide server list
 Executes all arguments as a single command on every server listed in the `/vagrant/servers` file by default.
 
