@@ -1,8 +1,8 @@
 ## Configure SSH Authentication to run the command on the remote without password input
 1. Create an SSH Key pair on the main server and accept all the default.</br>
 `ssh-keygen` 
-2. add serverNN in `/etc/hosts` 
-3. Copy the publice key to all the remote servers. </br>
+2. Add serverNNs IPs in `/etc/hosts` 
+3. Copy the public key to all the remote servers. </br>
 `ssh-copy-id serverNN`
 4. Test</br>
 `ssh-keygen` </br>
@@ -34,7 +34,7 @@ This way if a host is down, the script doesn't hang for more than 2 seconds per 
               Precede each command that would have been executed with `DRY RUN:`
   * `-s     `: Run the command with sudo (superuser) privileges on the remote servers.    
   * `-v     `: Enable verbose mode, which displays the name of the server for which the command is being executed on.
-  * `?      `: Any other option will cause the script to display a usage statement and exit with an exit status of 1.
+  * ` ?     `: Any other option will cause the script to display a usage statement and exit with an exit status of 1.
 
 ### 5. Privileges
 * Enforces that it be executed without superuser (root) privileges. 
