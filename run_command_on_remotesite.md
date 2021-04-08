@@ -4,7 +4,7 @@
 2. add serverNN in `/etc/hosts` 
 3. Copy the publice key to all the remote servers. 
 `ssh-copy-id serverNN`
-4. Test
+4. Test</br>
 $ssh-keygen </br>
 $ssh-copy-id server02</br>
 Are you sure you want to continue connecting (yes/no)? yes </br>
