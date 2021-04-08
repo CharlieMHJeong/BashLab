@@ -62,7 +62,8 @@ fi
 
 #Expect the best, prepare for the worst
 EXIT_STATUS='0'
-LOOP through the SERVER_LIST
+
+#LOOP through the SERVER_LIST
 for SERVER in $(cat ${SERVER_LIST})
 do
   if [[ ${VERBOSE} = 'true' ]]
