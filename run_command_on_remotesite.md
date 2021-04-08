@@ -1,19 +1,19 @@
 # Requirements
 ### 1. Provide server list
-Executes all arguments as a single command on every server listed in the /vagrant/servers file by default.
+Executes all arguments as a single command on every server listed in the `/vagrant/servers` file by default.
 
 ### 2. Command
 Executes the provided command as the user executing the script.
 
 ### 3. SSH Option
-Use "ssh -o ConnectTimeout=2" to connect to a host. </br>
+Use `ssh -o ConnectTimeout=2` to connect to a host. </br>
 This way if a host is down, the script doesn't hang for more than 2 seconds per down server.
 
 ### 4. Usage Statement
 * Provides a usage statement much like you would find in a man page and returns an exit status of 1. 
 * All messages associated with this event will be displayed on standard error.
 * Messages:
-  * -f FILE: This allows the user to override the default file of /vagrant/servers. </br>
+  * -f FILE: This allows the user to override the default file of `/vagrant/servers`. </br>
              - This way they can create their own list of servers execute commands against that list.
   * -n     : allows the user to perform a "dry run" where the commands will be displayed instead of executed.  </br>
               Precede each command that would have been executed with `DRY RUN:`
