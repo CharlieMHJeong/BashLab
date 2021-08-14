@@ -3,7 +3,7 @@
 # Count the number of failed logins by IP address.
 # If there are any IPs with over LIMIT failures, display the count, IP, and location.
 
-LIMIT='1'
+LIMIT='10'
 GIVEN_FILE=${1}
 
 if [[ ! -e ${GIVEN_FILE} ]]
@@ -14,6 +14,7 @@ then
 fi
 
 echo "COUNT, IP, Location"
+
 grep ' Failed' ${GIVEN_FILE} | awk '{print $(NF-3)}' |  sort | uniq -c | sort -nr | while read COUNT IP
 do
   LOCATION=$(geoiplookup ${IP} | awk -F ', ' '{print $(NF)}')
