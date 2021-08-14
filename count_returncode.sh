@@ -38,9 +38,10 @@ for CODE in ${CODES}
 do
   echo ""
   echo "Counting the code: ${CODE}"
+  echo "HOST, COUNT"  
   grep " ${CODE} " ${GIVEN_FILE} | awk '{print $1}' | sort | uniq -c | while read COUNT HOST
   do
-    echo "${COUNT}, ${HOST}"  
+    echo "${HOST}, ${COUNT}"  
   done
   echo ""
 done
