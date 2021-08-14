@@ -20,12 +20,13 @@
 #pd9eb1396.dip.t-dialin.net,1
 #64-249-27-114.client.dsl.net,1
 
-GIVEN_FILE=${1]
+GIVEN_FILE=${1}
 if [[ ! -e ${GIVEN_FILE} ]]
-do
+then
   echo "Pleae proved log file to process" >&2
+  echo "Usage: ${0} <Logfile to process> " >&2
   exit 1
-done
+fi
 
 getcode(){
   awk '{print $(NF-1)}' ${GIVEN_FILE} | sort | uniq
@@ -33,13 +34,13 @@ getcode(){
 
 CODES=$(getcode)
 
-for CODE in CODES
-echo "Counting the code: ${CODE}"
+for CODE in ${CODES}
 do
+  echo ""
+  echo "Counting the code: ${CODE}"
   grep " ${CODE} " ${GIVEN_FILE} | awk '{print $1}' | sort | uniq -c | while read COUNT HOST
   do
     echo "${COUNT}, ${HOST}"  
   done
+  echo ""
 done
-
-
