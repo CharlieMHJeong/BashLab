@@ -21,5 +21,25 @@
 #64-249-27-114.client.dsl.net,1
 
 GIVEN_FILE=${1]
+if [[ ! -e ${GIVEN_FILE} ]]
+do
+  echo "Pleae proved log file to process" >&2
+  exit 1
+done
+
+getcode(){
+  awk '{print $(NF-1)}' ${GIVEN_FILE} | sort | uniq
+}
+
+CODES=$(getcode)
+
+for CODE in CODES
+echo "Counting the code: ${CODE}"
+do
+  grep " ${CODE} " ${GIVEN_FILE} | awk '{print $1}' | sort | uniq -c | while read COUNT HOST
+  do
+    echo "${COUNT}, ${HOST}"  
+  done
+done
 
 
